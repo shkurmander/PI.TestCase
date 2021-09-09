@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox x:Name="txbFirstValute" Visibility="true" />
+        <TextBox x:Name="txbFirstValute"  />
         
         
     </Grid>

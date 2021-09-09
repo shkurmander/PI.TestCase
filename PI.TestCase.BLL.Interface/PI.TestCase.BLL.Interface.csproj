@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PI.TestCase.DAL.Entities\PI.TestCase.Entities.csproj" />
+    <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />
   </ItemGroup>
 
 </Project>
