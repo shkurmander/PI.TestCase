@@ -5,4 +5,8 @@
     <AssemblyName>PI.TestCase.Exceptions</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PI.TestCase.DAL.Entities\PI.TestCase.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
