@@ -1,13 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>PI.TestCase.BLL</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PI.TestCase.BLL.Interface\PI.TestCase.BLL.Interface.csproj" />
-    <ProjectReference Include="..\PI.TestCase.DAL.Interface\PI.TestCase.DAL.Interface.csproj" />
     <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />
     <ProjectReference Include="..\PI.TestCase.Models\PI.TestCase.Models.csproj" />
   </ItemGroup>

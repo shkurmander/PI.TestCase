@@ -5,7 +5,7 @@ namespace PI.TestCase.DAL.Impl
 {
     public class ValuteSqlContext : DbContext
     {
-        private string _dbconnection;
+        private readonly string _dbconnection;
         public DbSet<Valute> Valutes { get; set; }
 
 

@@ -1,16 +1,14 @@
 ﻿using PI.TestCase.DAL.Interface;
 using PI.TestCase.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PI.TestCase.DAL.Impl
 {
     public class ValuteSqlRepository : IValuteRepository
     {
-        private ValuteSqlContext _db;
+        private readonly ValuteSqlContext _db;
         public ValuteSqlRepository(string dbconnection)
         {
             _db = new ValuteSqlContext(dbconnection);
