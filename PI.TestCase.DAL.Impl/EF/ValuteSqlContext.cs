@@ -1,15 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PI.TestCase.Entities;
 
-namespace PI.TestCase.DAL.Impl.EF
+namespace PI.TestCase.DAL.Impl
 {
-    public class ValuteContextSql : DbContext
+    public class ValuteSqlContext : DbContext
     {
         private string _dbconnection;
-        public DbSet<Valute> Targets { get; set; }
+        public DbSet<Valute> Valutes { get; set; }
 
 
-        public ValuteContextSql(string dbconnection)
+        public ValuteSqlContext(string dbconnection)
         {
             _dbconnection = dbconnection;
             Database.EnsureCreated();

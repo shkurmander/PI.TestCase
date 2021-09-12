@@ -5,4 +5,8 @@
     <AssemblyName>PI.TestCase.DAL</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

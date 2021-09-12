@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PI.TestCase.DAL.Interface\PI.TestCase.DAL.Interface.csproj" />
     <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />
   </ItemGroup>
 
