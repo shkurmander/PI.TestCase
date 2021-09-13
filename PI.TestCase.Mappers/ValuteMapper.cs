@@ -1,7 +1,6 @@
 ﻿using PI.TestCase.Models;
 using PI.TestCase.Entities;
 
-
 namespace PI.TestCase.Mappers
 {
     public static class ValuteMapper

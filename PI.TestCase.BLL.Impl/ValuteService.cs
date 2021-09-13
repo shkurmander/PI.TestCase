@@ -6,11 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-
 namespace PI.TestCase.BLL.Impl
 {
     public class ValuteService : IValuteService
     {
+        const String URL= "https://www.cbr-xml-daily.ru/daily_json.js";
         private readonly IValuteRepository _da;
         public ValuteService(IValuteRepository da)
         {
@@ -20,14 +20,14 @@ namespace PI.TestCase.BLL.Impl
 
         public void LoadData()
         {
-            String url = "https://www.cbr-xml-daily.ru/daily_json.js";
+            
 
             using (WebClient client = new WebClient())
             {
-                String jsonStr = client.DownloadString(url);
-                JObject jObj = JObject.Parse(jsonStr);
+                var jsonStr = client.DownloadString(URL);
+                var jObj = JObject.Parse(jsonStr);
                 //избавляемся от вложенности и конвертим в словарь.
-                JToken jList = (jObj["Valute"]);
+                var jList = (jObj["Valute"]);
                 jObj = (JObject)jList;
                 var courses = jObj.ToObject<Dictionary<string, Valute>>();
 

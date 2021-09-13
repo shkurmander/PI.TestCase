@@ -54,6 +54,7 @@ namespace PI.TestCase.DAL.Impl
             result.Name = newValute.Name;
             result.Value = newValute.Value;
             result.Previous = newValute.Previous;            
+            result.Previous = newValute.Previous;            
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿
-
-namespace PI.TestCase.Entities.Config
+﻿namespace PI.TestCase.Entities.Config
 {
     public class ConfigDal
     {
