@@ -1,5 +1,6 @@
 ﻿using PI.TestCase.BLL.Impl;
 using PI.TestCase.BLL.Interface;
+using PI.TestCase.DAL.Impl;
 using PI.TestCase.DAL.Interface;
 using PI.TestCase.Entities.Config;
 using System;

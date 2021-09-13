@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PI.TestCase.BLL.Interface\PI.TestCase.BLL.Interface.csproj" />
     <ProjectReference Include="..\PI.TestCase.DAL.Interface\PI.TestCase.DAL.Interface.csproj" />
     <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />

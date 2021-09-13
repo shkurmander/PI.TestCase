@@ -1,8 +1,10 @@
-﻿using PI.TestCase.BLL.Interface;
+﻿using Newtonsoft.Json.Linq;
+using PI.TestCase.BLL.Interface;
 using PI.TestCase.DAL.Interface;
 using PI.TestCase.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text.Json;
 
@@ -14,6 +16,7 @@ namespace PI.TestCase.BLL.Impl
         public ValuteService(IValuteRepository da)
         {
             _da = da;
+            LoadData();
         }
 
         public decimal Convert(string charCode1, string charCode2, decimal ammount)
@@ -30,12 +33,32 @@ namespace PI.TestCase.BLL.Impl
             String url = "https://www.cbr-xml-daily.ru/daily_json.js"; 
             WebClient client = new WebClient(); 
             String jsonStr = client.DownloadString(url);
-            var valuteList = JsonSerializer.Deserialize<List<Valute>>(jsonStr);
-            foreach (var item in valuteList)
+           
+            JObject jObj = JObject.Parse(jsonStr);       
+            JToken jList = (jObj["Valute"]);
+            JObject jObj2 = (JObject)jList;
+
+            var courses = jObj2.ToObject<Dictionary<string, Valute>>();
+
+            //List<Valute> valuteList = new List<Valute>();
+
+            foreach (var item in courses)
             {
-                _da.Add(item);
-            }           
+                _da.Add(item.Value);                
+            }
+
+
+           
             
+            //foreach (var item in valuteList)
+            //{
+            //   _da.Add(item);
+            //}           
+
+        }
+        public IEnumerable<Valute> GetValutesList()
+        {
+            return _da.GetAll();
         }
     }
 }

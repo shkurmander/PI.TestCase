@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace PI.TestCase.DAL.Impl
 {
-    class ValuteMemoryRepository : IValuteRepository
+    public class ValuteMemoryRepository : IValuteRepository
     {
         private readonly MemoryContext _db;
         public ValuteMemoryRepository()
@@ -53,7 +53,7 @@ namespace PI.TestCase.DAL.Impl
             result.Nominal = newValute.Nominal;
             result.Name = newValute.Name;
             result.Value = newValute.Value;
-            result.Prevous = newValute.Prevous;
+            result.Previous = newValute.Previous;
             
         }
     }
