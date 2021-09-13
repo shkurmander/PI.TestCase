@@ -8,10 +8,10 @@ namespace PI.TestCase.DAL.Impl
 {
     public class ValuteSqlRepository : IValuteRepository
     {
-        private readonly ValuteSqlContext _db;
+        private readonly SqlContext _db;
         public ValuteSqlRepository(string dbconnection)
         {
-            _db = new ValuteSqlContext(dbconnection);
+            _db = new SqlContext(dbconnection);
         }
 
         public void Add(Valute newValute)

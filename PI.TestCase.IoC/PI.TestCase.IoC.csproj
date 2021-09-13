@@ -4,4 +4,12 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PI.TestCase.BLL.Impl\PI.TestCase.BLL.Impl.csproj" />
+    <ProjectReference Include="..\PI.TestCase.BLL.Interface\PI.TestCase.BLL.Interface.csproj" />
+    <ProjectReference Include="..\PI.TestCase.DAL.Impl\PI.TestCase.DAL.Impl.csproj" />
+    <ProjectReference Include="..\PI.TestCase.DAL.Interface\PI.TestCase.DAL.Interface.csproj" />
+    <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,7 +1,10 @@
 ﻿using PI.TestCase.BLL.Interface;
 using PI.TestCase.DAL.Interface;
+using PI.TestCase.Entities;
 using System;
-
+using System.Collections.Generic;
+using System.Net;
+using System.Text.Json;
 
 namespace PI.TestCase.BLL.Impl
 {
@@ -24,7 +27,15 @@ namespace PI.TestCase.BLL.Impl
 
         public void LoadData()
         {
-            throw new NotImplementedException();
+            String url = "https://www.cbr-xml-daily.ru/daily_json.js"; 
+            WebClient client = new WebClient(); 
+            String jsonStr = client.DownloadString(url);
+            var valuteList = JsonSerializer.Deserialize<List<Valute>>(jsonStr);
+            foreach (var item in valuteList)
+            {
+                _da.Add(item);
+            }           
+            
         }
     }
 }

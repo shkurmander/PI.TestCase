@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>PI.TestCase.BLL</AssemblyName>
+    <AssemblyName>PI.TestCase.BLL.Impl</AssemblyName>
+    <RootNamespace>PI.TestCase.BLL</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

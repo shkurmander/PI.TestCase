@@ -3,13 +3,13 @@ using PI.TestCase.Entities;
 
 namespace PI.TestCase.DAL.Impl
 {
-    public class ValuteSqlContext : DbContext
+    public class SqlContext : DbContext
     {
         private readonly string _dbconnection;
         public DbSet<Valute> Valutes { get; set; }
 
 
-        public ValuteSqlContext(string dbconnection)
+        public SqlContext(string dbconnection)
         {
             _dbconnection = dbconnection;
             Database.EnsureCreated();
