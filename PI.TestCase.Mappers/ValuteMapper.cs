@@ -13,29 +13,8 @@ namespace PI.TestCase.Mappers
             return new ValuteModel
             {
                 Name = valute.Name,
-                CharCode = valute.CharCode
-                
+                CharCode = valute.CharCode                
             };
         }
-
-        //public static Valute ToBLL(Valute valute)
-        //{
-        //    if (valute == null) return null;
-
-        //    return new Valute
-        //    {
-        //        Name = valute.Name,
-        //        CharCode = valute.CharCode,
-        //        Id = "",
-        //        NumCode = 0,
-        //        Nominal = 0,
-        //        Value = 0,
-        //        Prevous = 0
-        //    };
-        //}
-
-
-
-
     }
 }

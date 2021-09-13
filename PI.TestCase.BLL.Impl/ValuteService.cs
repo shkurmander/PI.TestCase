@@ -4,9 +4,8 @@ using PI.TestCase.DAL.Interface;
 using PI.TestCase.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text.Json;
+
 
 namespace PI.TestCase.BLL.Impl
 {
@@ -45,8 +44,7 @@ namespace PI.TestCase.BLL.Impl
             var valute1 = _da.GetByCharCode(charCode1);
             var valute2 = _da.GetByCharCode(charCode1);
 
-            return  (valute1.Value / valute1.Nominal * ammount) / valute2.Value;         
-
+            return  (valute1.Value / valute1.Nominal * ammount) / valute2.Value; 
         }
 
        

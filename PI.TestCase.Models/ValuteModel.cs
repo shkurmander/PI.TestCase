@@ -1,12 +1,8 @@
-﻿
-
-namespace PI.TestCase.Models
+﻿namespace PI.TestCase.Models
 {
     public class ValuteModel
     {
         public string Name { get; set; }
-        public string CharCode { get; set; }
-        
-
+        public string CharCode { get; set; } 
     }
 }

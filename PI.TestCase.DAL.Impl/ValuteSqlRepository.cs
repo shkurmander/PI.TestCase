@@ -3,12 +3,12 @@ using PI.TestCase.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace PI.TestCase.DAL.Impl
 {
     public class ValuteSqlRepository : IValuteRepository
     {
         private readonly SqlContext _db;
+
         public ValuteSqlRepository(string dbconnection)
         {
             _db = new SqlContext(dbconnection);
@@ -40,8 +40,7 @@ namespace PI.TestCase.DAL.Impl
 
         public Valute GetByCharCode(string charCode)
         {
-            return _db.Valutes.SingleOrDefault(v => v.CharCode == charCode);                   
-            
+            return _db.Valutes.SingleOrDefault(v => v.CharCode == charCode);
         }
 
         public Valute GetById(string id)

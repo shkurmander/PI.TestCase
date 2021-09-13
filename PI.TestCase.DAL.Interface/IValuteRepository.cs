@@ -1,7 +1,6 @@
 ﻿using PI.TestCase.Entities;
 using System.Collections.Generic;
 
-
 namespace PI.TestCase.DAL.Interface
 {
     public interface IValuteRepository

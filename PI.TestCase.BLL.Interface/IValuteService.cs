@@ -1,7 +1,4 @@
-﻿
-
-
-using PI.TestCase.Entities;
+﻿using PI.TestCase.Entities;
 using System.Collections.Generic;
 
 namespace PI.TestCase.BLL.Interface

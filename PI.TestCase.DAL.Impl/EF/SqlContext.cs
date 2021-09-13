@@ -8,7 +8,6 @@ namespace PI.TestCase.DAL.Impl
         private readonly string _dbconnection;
         public DbSet<Valute> Valutes { get; set; }
 
-
         public SqlContext(string dbconnection)
         {
             _dbconnection = dbconnection;
