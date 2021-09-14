@@ -3,19 +3,21 @@ using PI.TestCase.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace PI.TestCase.DAL.Impl
 {
     public class ValuteSqlRepository : IValuteRepository
     {
-        private readonly SqlContext _db;
+        private  SqlContext _db;
 
         public ValuteSqlRepository(string dbconnection)
         {
-            _db = new SqlContext(dbconnection);
+            _db = new SqlContext(dbconnection); 
         }
 
         public void Add(Valute newValute)
         {
+            
             _db.Add(newValute);
             Save();
         }

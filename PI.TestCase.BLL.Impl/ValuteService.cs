@@ -42,7 +42,7 @@ namespace PI.TestCase.BLL.Impl
         public decimal Convert(string charCode1, string charCode2, decimal ammount)
         {
             var valute1 = _da.GetByCharCode(charCode1);
-            var valute2 = _da.GetByCharCode(charCode1);
+            var valute2 = _da.GetByCharCode(charCode2);
 
             return  (valute1.Value / valute1.Nominal * ammount) / valute2.Value; 
         }
