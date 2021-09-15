@@ -13,7 +13,7 @@ namespace PI.TestCase.DAL.Impl
             _dbconnection = dbconnection;
             Database.EnsureCreated();
 
-            this.Database.ExecuteSqlRaw("TRUNCATE TABLE [Valutes]");
+            Database.ExecuteSqlRaw("TRUNCATE TABLE [Valutes]");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

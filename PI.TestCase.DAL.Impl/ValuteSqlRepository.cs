@@ -16,8 +16,7 @@ namespace PI.TestCase.DAL.Impl
         }
 
         public void Add(Valute newValute)
-        {
-            
+        {            
             _db.Add(newValute);
             Save();
         }
