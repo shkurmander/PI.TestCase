@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="PI.TestCase.UserInterface.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PI.TestCase.UserInterface"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <Border BorderBrush="Black" BorderThickness="2" >
+    <Grid Height ="500" Width ="300" BorderBrush="Black">
+      <Border Margin="0,0,0,0" Height="30" VerticalAlignment="Top" Background = "Gainsboro">
+        <TextBlock HorizontalAlignment="Stretch" Text="Конвертер валют" TextWrapping="Wrap" VerticalAlignment="Center" Height="27" Width="300" FontSize="16" FontWeight="Bold" MaxLines="1"
+         FontStyle="Normal" TextAlignment="Center" />
+      </Border>
+
+      <StackPanel Orientation="Vertical" Margin="0,170,0,0">
+        <ProgressRing HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="50" Width="50" IsActive ="True"/>
+        <Button HorizontalAlignment="Center" Margin="0,50,0,0" Height="30" Width="100" Content="Повторить" Visibility="Visible" />
+        <TextBlock />
+      </StackPanel>
+    </Grid>
+  </Border>
+  
+</Page>

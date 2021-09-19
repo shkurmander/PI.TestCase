@@ -20,7 +20,17 @@ namespace PI.TestCase.BLL.Impl
 
         public void LoadData()
         {
-            
+
+            _da.Add(new Valute()
+            {
+                Id = "00000",
+                NumCode = 810,
+                CharCode = "RUB",
+                Nominal = 1,
+                Name = "Российский рубль",
+                Value = 1,
+                Previous = 1
+            });
 
             using (WebClient client = new WebClient())
             {
@@ -40,10 +50,14 @@ namespace PI.TestCase.BLL.Impl
         }
 
         public decimal Convert(string charCode1, string charCode2, decimal ammount)
-        {
+        {            
             var valute1 = _da.GetByCharCode(charCode1);
+            if (charCode2 == "RUB")
+            {
+                return valute1.Value / valute1.Nominal * ammount;
+            }
             var valute2 = _da.GetByCharCode(charCode2);
-
+            
             return  (valute1.Value / valute1.Nominal * ammount) / valute2.Value; 
         }
 

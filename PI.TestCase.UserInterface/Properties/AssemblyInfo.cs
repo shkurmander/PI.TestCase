@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения о сборке можно задать с помощью следующего 
 // атрибутов. Отредактируйте значения этих атрибутов, чтобы изменить
 // сведений о сборке.
-[assembly: AssemblyTitle("PI.TestCase.PL.UI")]
+[assembly: AssemblyTitle("PI.TestCase.UserInterface")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PI.TestCase.PL.UI")]
+[assembly: AssemblyProduct("PI.TestCase.UserInterface")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

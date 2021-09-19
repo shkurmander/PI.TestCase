@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="0dd46db8-167c-4ae2-9571-17205b32dd63"
+    Name="1aa8e44a-e2ed-4c2f-aee4-462ebc6cb557"
     Publisher="CN=shkur"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0dd46db8-167c-4ae2-9571-17205b32dd63" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="1aa8e44a-e2ed-4c2f-aee4-462ebc6cb557" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>PI.TestCase.PL.UI</DisplayName>
+    <DisplayName>PI.TestCase.UserInterface</DisplayName>
     <PublisherDisplayName>shkur</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="PI.TestCase.PL.UI.App">
+      EntryPoint="PI.TestCase.UserInterface.App">
       <uap:VisualElements
-        DisplayName="PI.TestCase.PL.UI"
+        DisplayName="PI.TestCase.UserInterface"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="PI.TestCase.PL.UI"
+        Description="PI.TestCase.UserInterface"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
