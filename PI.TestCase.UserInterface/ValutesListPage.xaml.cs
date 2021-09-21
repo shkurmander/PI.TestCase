@@ -20,9 +20,9 @@ namespace PI.TestCase.UserInterface
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class CalcView : Page
+    public sealed partial class ValutesListPage : Page
     {
-        public CalcView()
+        public ValutesListPage()
         {
             this.InitializeComponent();
         }
