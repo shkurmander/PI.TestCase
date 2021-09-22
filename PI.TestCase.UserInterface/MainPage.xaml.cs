@@ -29,11 +29,7 @@ namespace PI.TestCase.UserInterface
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var frame = new Frame();
-            Window.Current.Content = frame;
-            frame.Navigate(typeof(CalcPage));
-            Window.Current.Activate();
-            
+            Frame.Navigate(typeof(CalcPage));
         }
     }
 }

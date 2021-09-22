@@ -8,11 +8,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid  >
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
 
@@ -21,38 +21,25 @@
             <TextBlock HorizontalAlignment="Stretch" Text="Конвертер валют" VerticalAlignment="Center" Height="27" Width="300" FontSize="16" FontWeight="Bold" MaxLines="1"
                            TextAlignment="Center" />
         </Border>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="80">
-            <TextBox x:Name="textBoxAmount1" HorizontalAlignment="Left" Text="0.0" TextAlignment="Center" 
-                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" BorderThickness="0"> </TextBox>
-            <TextBox x:Name="textBoxAmount2" HorizontalAlignment="Right" Text="0.0" TextAlignment="Center" 
-                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" BorderThickness="0"></TextBox>
-        </StackPanel>       
-        
-        <Button x:Name="ChangeButton" Grid.Row="2" HorizontalAlignment="Center" Height="30" Width="70" Background="White" BorderThickness="0" >
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>                        
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>                            
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
-            <Image Source="Assets\change.png" VerticalAlignment="Center" Height="30" Width="50" Stretch="Fill"/>
-        </Button>
-
-
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="80" >
-            <TextBox x:Name="textBoxCharCode1" HorizontalAlignment="Left" Text="RU" TextAlignment="Center" 
-                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" BorderThickness="0"></TextBox>
-            <TextBox x:Name="textBoxCharCode2" HorizontalAlignment="Right" Text="USD" TextAlignment="Center" 
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="80" >
+            <TextBox x:Name="TextBoxAmount" HorizontalAlignment="Left" Text="0.0" TextAlignment="Center" 
+                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" BorderThickness="0"/>
+            <TextBox x:Name="TextBoxResult" HorizontalAlignment="Right" Text="0.0" TextAlignment="Center" 
                          FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" BorderThickness="0"></TextBox>
         </StackPanel>
+        <Image x:Name="ChangeRow" Grid.Row="2" Source="Assets\change.png" VerticalAlignment="Center" Height="30" Width="50" Stretch="Fill"/>
+        
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="80" >
+            <TextBlock x:Name="TextBlockCharCode1" HorizontalAlignment="Left" Text="RU" TextAlignment="Center" 
+                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" Tapped="TextBlockCharCode1_Tapped" ></TextBlock>
+            <TextBlock x:Name="TextBlockCharCode2" HorizontalAlignment="Right" Text="USD" TextAlignment="Center" 
+                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" Tapped="TextBlockCharCode2_Tapped_1" ></TextBlock>
+        </StackPanel>
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="80">
-            <TextBlock x:Name="tBlockChange1" VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping ="Wrap" Text="Изменить валюту" TextAlignment="Center" 
-                         FontWeight="Bold" Margin="0,50,0,0" Height="50" Width="70" Foreground="#FF0F8CF5" ></TextBlock>
-            <TextBlock x:Name="tBlockChange2" VerticalAlignment="Top" HorizontalAlignment="Right" TextWrapping ="Wrap" Text="Изменить валюту" TextAlignment="Center" 
-                         FontWeight="Bold" Margin="0,50,0,0" Height="50" Width="70" Foreground="#FF0F8CF5" ></TextBlock>
+            <TextBlock x:Name="TextBlockChange1" VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping ="Wrap" Text="Изменить валюту" TextAlignment="Center" 
+                         FontWeight="Bold" Margin="0,50,0,0" Height="50" Width="70" Foreground="#FF0F8CF5" Tapped="TextBlockChange1_Tapped" ></TextBlock>
+            <TextBlock x:Name="TextBlockChange2" VerticalAlignment="Top" HorizontalAlignment="Right" TextWrapping ="Wrap" Text="Изменить валюту" TextAlignment="Center" 
+                         FontWeight="Bold" Margin="0,50,0,0" Height="50" Width="70" Foreground="#FF0F8CF5" Tapped="TextBlockChange2_Tapped" ></TextBlock>
         </StackPanel>
 
     </Grid>

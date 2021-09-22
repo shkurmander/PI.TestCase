@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PI.TestCase.Entities\PI.TestCase.Entities.csproj" />
+    <ProjectReference Include="..\PI.TestCase.BLL.Interface\PI.TestCase.BLL.Interface.csproj" />
     <ProjectReference Include="..\PI.TestCase.IoC\PI.TestCase.IoC.csproj" />
     <ProjectReference Include="..\PI.TestCase.Mappers\PI.TestCase.Mappers.csproj" />
   </ItemGroup>

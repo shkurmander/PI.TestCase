@@ -22,9 +22,39 @@ namespace PI.TestCase.UserInterface
     /// </summary>
     public sealed partial class CalcPage : Page
     {
+
+        public Valute ValuteRecord { get; set; }
+
         public CalcPage()
         {
             this.InitializeComponent();
+        }               
+
+        private void TextBlockCharCode1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ValutesList));
+        }
+
+        private void TextBlockCharCode2_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ValutesList));
+        }
+
+        private void TextBlockChange1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ValutesList));
+        }
+
+        private void TextBlockChange2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ValutesList));
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            ValuteRecord = e.Parameter as Valute;
+            //TextBlockCharCode1.Text = ValuteRecord.CharCode;
+            //TextBlockCharCode1.Text = ValuteRecord.CharCode;
         }
     }
 }
