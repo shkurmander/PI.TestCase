@@ -24,6 +24,7 @@ namespace PI.TestCase.UserInterface
     {
 
         public Valute ValuteRecord { get; set; }
+        public int selection { get; set; }
 
         public CalcPage()
         {
@@ -32,29 +33,45 @@ namespace PI.TestCase.UserInterface
 
         private void TextBlockCharCode1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            selection = 1;
             Frame.Navigate(typeof(ValutesList));
         }
 
-        private void TextBlockCharCode2_Tapped_1(object sender, TappedRoutedEventArgs e)
+        private void TextBlockCharCode2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            selection = 2;
             Frame.Navigate(typeof(ValutesList));
         }
 
         private void TextBlockChange1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            selection = 1;
             Frame.Navigate(typeof(ValutesList));
         }
 
         private void TextBlockChange2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            selection = 2;
             Frame.Navigate(typeof(ValutesList));
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            ValuteRecord = e.Parameter as Valute;
-            //TextBlockCharCode1.Text = ValuteRecord.CharCode;
-            //TextBlockCharCode1.Text = ValuteRecord.CharCode;
+            if (e.Parameter != null)
+            {
+                ValuteRecord = e.Parameter as Valute;
+                switch (selection)
+                {
+                    case 1 : TextBlockCharCode1.Text = ValuteRecord.CharCode; break;
+                    case 2: TextBlockCharCode2.Text = ValuteRecord.CharCode; break;
+                    default:
+                        break;
+                }
+               
+            }
+            
         }
+
+        
     }
 }

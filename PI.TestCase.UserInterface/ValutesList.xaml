@@ -12,9 +12,9 @@
         <ListView IsItemClickEnabled="True" ItemsSource="{x:Bind vm.Data}" ItemClick="ListView_ItemClick">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Valute">
-                    <StackPanel Orientation="Horizontal" Spacing="50" >
-                        <TextBlock Text="{x:Bind Name}" HorizontalAlignment="Left"/>
-                        <TextBlock Text="{x:Bind CharCode}" HorizontalAlignment= "Right"/>
+                    <StackPanel Orientation="Horizontal"  >
+                        <TextBlock Text="{x:Bind Name}" HorizontalAlignment="Left" Width="240" TextWrapping="Wrap"/>
+                        <TextBlock Text="{x:Bind CharCode}" HorizontalAlignment= "Right" Width="35"/>
                     </StackPanel> 
                 </DataTemplate>
             </ListView.ItemTemplate> 

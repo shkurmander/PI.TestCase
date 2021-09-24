@@ -33,7 +33,7 @@
             <TextBlock x:Name="TextBlockCharCode1" HorizontalAlignment="Left" Text="RU" TextAlignment="Center" 
                          FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" Tapped="TextBlockCharCode1_Tapped" ></TextBlock>
             <TextBlock x:Name="TextBlockCharCode2" HorizontalAlignment="Right" Text="USD" TextAlignment="Center" 
-                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" Tapped="TextBlockCharCode2_Tapped_1" ></TextBlock>
+                         FontWeight="Bold" Margin="0,0,0,0" Height="25" Width="70" Tapped="TextBlockCharCode2_Tapped" ></TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="80">
             <TextBlock x:Name="TextBlockChange1" VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping ="Wrap" Text="Изменить валюту" TextAlignment="Center" 
